@@ -11,24 +11,38 @@
     </div>
 
     <h1>Jogador B</h1>
-    <div *ngFor="let cartas of mesa.jogadorB.cartas">
-      <span>{{cartas.nome}} {{cartas.naipe}} {{cartas.valor}}</span>
+    <div class="mao">
+      <div *ngFor="let cartas of mesa.jogadorB.cartas" class="carta">
+        <span class="nome {{cartas.naipe}}">{{cartas.nome}}<img src="/assets/images/{{cartas.naipe}}.png" ></span>
+        <span class="naipe"><img src="/assets/images/{{cartas.naipe}}.png" ></span>
+      </div>
     </div>
 
-    <h1>Morto A</h1>
-    <div *ngFor="let cartas of mesa.mortoA">
-      <span>{{cartas.nome}} {{cartas.naipe}} {{cartas.valor}}</span>
-    </div>
-
-    <h1>Morto B</h1>
-    <div *ngFor="let cartas of mesa.mortoB">
-      <span>{{cartas.nome}} {{cartas.naipe}} {{cartas.valor}}</span>
-    </div>
+    <h1>MESA A</h1>
+    <h1>MESA B</h1>
   </div>
   <div>
     <h1>DECK</h1>
-    <div *ngFor="let cartas of mesa.deck">
-      <small>{{cartas.nome}} {{cartas.naipe}} {{cartas.valor}}</small>
+    <div class="mao deck">
+      <div *ngFor="let cartas of mesa.deck" class="carta">
+        <span class="nome {{cartas.naipe}}">{{cartas.nome}}<img src="/assets/images/{{cartas.naipe}}.png" ></span>
+        <span class="naipe"><img src="/assets/images/{{cartas.naipe}}.png" ></span>
+      </div>
+    </div>
+    <h1>Morto A</h1>
+    <div class="mao">
+      <div *ngFor="let cartas of mesa.mortoA" class="carta">
+        <span class="nome {{cartas.naipe}}">{{cartas.nome}}<img src="/assets/images/{{cartas.naipe}}.png" ></span>
+        <span class="naipe"><img src="/assets/images/{{cartas.naipe}}.png" ></span>
+      </div>
+    </div>
+
+    <h1>Morto B</h1>
+    <div class="mao">
+      <div *ngFor="let cartas of mesa.mortoB" class="carta">
+        <span class="nome {{cartas.naipe}}">{{cartas.nome}}<img src="/assets/images/{{cartas.naipe}}.png" ></span>
+        <span class="naipe"><img src="/assets/images/{{cartas.naipe}}.png" ></span>
+      </div>
     </div>
   </div>
 </div>

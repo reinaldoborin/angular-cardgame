@@ -1,0 +1,60 @@
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mao {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 45px);
+  row-gap: 10px;
+}
+
+.carta {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px 0px rgba(163,161,163,1);
+  background-color: #fff;
+}
+
+.carta:hover {
+  z-index: 1000;
+  box-shadow: 0px 0px 8px 0px rgba(163,161,163,1);
+  border-color: black;
+}
+
+.carta .nome {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.carta .naipe {
+  position: absolute;
+  top: 40px;
+  left: 7px;
+}
+
+.carta .naipe img {
+  width: 45px;
+  height: 45px;
+}
+
+.carta .nome img {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+}
+
+.copas, .ouros {
+  color: red;
+}
+
+.espadas, .paus {
+  color: black;
+}

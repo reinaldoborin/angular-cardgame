@@ -1,15 +1,15 @@
 import { Carta } from "./carta.model";
 
-export class Deck {
+export class Baralho {
   baralho: Carta[] = [];
 
   constructor() {
 
   }
 
-  criarDeck() {
-    let cartas = ["ÁS", "DOIS", "TRÊS", "QUATRO", "CINCO", "SEIS", "SETE", "OITO", "NOVE", "DEZ", "VALETE", "DAMA", "REI"];
-    let naipes = ["Espadas", "Ouros", "Copas", "Paus"];
+  criarBaralho() {
+    let cartas = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "R"];
+    let naipes = ["espadas", "ouros", "copas", "paus"];
     let valor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
     for(let x = 0; x < cartas.length; x++){

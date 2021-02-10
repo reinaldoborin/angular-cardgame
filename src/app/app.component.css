@@ -1,61 +1,15 @@
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.mao {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 45px);
-  row-gap: 10px;
-  padding: 20px;
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
-.carta {
-  width: 50px;
-  height: 100px;
-  position: relative;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0px 0px 6px 0px rgba(163,161,163,1);
-  background-color: #fff;
-}
-
-.carta:hover {
-  z-index: 1000;
-  box-shadow: 0px 0px 8px 0px rgba(163,161,163,1);
-  border-color: black;
-}
-
-.carta .nome {
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.carta .naipe {
-  position: absolute;
-  top: 40px;
-  left: 7px;
-}
-
-.carta .naipe img {
-  width: 45px;
-  height: 45px;
-}
-
-.carta .nome img {
-  width: 14px;
-  height: 14px;
-  margin-top: 2px;
-}
-
-.copas, .ouros {
-  color: red;
-}
-
-.espadas, .paus {
-  color: black;
+.cdk-drag-placeholder {
+  opacity: 0;
 }

@@ -1,3 +1,133 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+:root {
+  --preto: #08090a;
+  --vermelho: #ff3836;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mao {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 45px);
+  row-gap: 10px;
+  padding: 20px;
+}
+
+.carta {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px 0px rgba(163,161,163,1);
+  background-color: #fff;
+}
+
+
+.carta.ativa {
+  margin-top: -10px;
+}
+
+
+.mao .carta:hover {
+  box-shadow: 0px 0px 8px 0px rgba(163,161,163,1);
+  border-color: var(--preto);
+  cursor: pointer;
+}
+
+.carta .nome {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.carta .naipe {
+  position: absolute;
+  top: 40px;
+  left: 7px;
+}
+
+.carta .naipe img {
+  width: 45px;
+  height: 45px;
+}
+
+.carta .nome img {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+}
+
+.copas, .ouros {
+  color: var(--vermelho);
+}
+
+.espadas, .paus {
+  color: var(--preto);
+}
+
+.carta.verso {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%23b32726' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%23d9302e' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%23b32726' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%23d9302e' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%23ff3836' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%23060607' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%23070809' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%2308090a' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%23070809' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%23060607' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%2308090a' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%23060607' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%2308090a' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%23070809' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%2308090a' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.total {
+  border: 1px solid var(--preto);
+  border-radius: 50px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.deck {
+  position: relative;
+}
+
+.deck:hover {
+  cursor: pointer;
+  border-color: var(--preto);
+}
+
+.deck .carta.verso {
+  padding: 1px;
+  box-shadow: none;
+  position: absolute;
+  left: 1px;
+}
+
+.deck .carta.verso:nth-child(1) {
+  left: 2px;
+  z-index: 1;
+}
+.deck .carta.verso:nth-child(2) {
+  left: 3px;
+  z-index: 2;
+}
+.deck .carta.verso:nth-child(3) {
+  left: 4px;
+  z-index: 3;
+}
+.deck .carta.verso:nth-child(4) {
+  left: 5px;
+  z-index: 4;
+}
+.deck .carta.verso:nth-child(5) {
+  left: 6px;
+  z-index: 5;
+}
+.deck .carta.verso:nth-child(6) {
+  left: 7px;
+  z-index: 6;
+}

@@ -23,7 +23,14 @@
     </div>
 
 
-    <h1>MESA A</h1>
+    <h1 (click)="descerCarta(mesa.jogadorA, null)">MESA A</h1>
+    <div *ngFor="let jogos of mesa.jogosA">
+      <div class="carta" *ngFor="let cartas of jogos">
+        <span class="nome {{cartas.naipe}}">{{cartas.nome}}<img src="/assets/images/{{cartas.naipe}}.png"></span>
+        <span class="naipe"><img src="/assets/images/{{cartas.naipe}}.png"></span>
+      </div>
+    </div>
+
     <h1>MESA B</h1>
     <h1>LIXO</h1>
 

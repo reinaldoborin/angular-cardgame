@@ -57,6 +57,10 @@ export class AppComponent implements OnInit {
     event.srcElement.classList.add("ativa");
   }
 
+  descerCarta(jogador: Jogador, indexMesa: number) {
+    this.mesa.descerCarta(jogador, indexMesa, this.selecao)
+  }
+
 }
 
 
